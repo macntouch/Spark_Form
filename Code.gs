@@ -1,3 +1,6 @@
+var SPARK_ROOM = 'SPARK_ROOM_ID'
+var SPARK_TOKEN = 'SPARK_TOKEN'
+
 function onFormSubmit(e) {
   var itemResponses = e.response.getItemResponses();
   Logger.log('Correo ingresado es '+ itemResponses[0].getResponse());
@@ -6,8 +9,8 @@ function onFormSubmit(e) {
 }
 
 function registerPerson(email) {
-  var roomId = 'PUT YOUR RoomID HERE';
-  var token = 'PUT YOUT TOKEN HERE';
+  var roomId = SPARK_ROOM;
+  var token = SPARK_TOKEN;
   var bearer = 'Bearer '+token;
   var url = 'https://api.ciscospark.com/v1/memberships';
   
